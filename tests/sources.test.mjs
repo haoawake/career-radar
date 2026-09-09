@@ -1,0 +1,6 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { normalize, classify, isUS, SOURCES } from '../lib/sources.ts';
+test('career classification and US scope',()=>{assert.equal(classify('Machine Learning Engineer'),'AI / 机器学习');assert.equal(classify('Frontend Software Engineer'),'软件工程');assert.equal(classify('Data Analyst'),'数据分析');assert.equal(isUS('London, UK'),false);assert.equal(isUS('Remote - US'),true);assert.equal(isUS('San Francisco'),true);assert.equal(isUS('Remote'),false)});
+test('stable IDs and internships',()=>{const source=SOURCES[0];const raw={jobs:[{id:123,title:'Software Engineer Intern',location:{name:'New York'},absolute_url:'https://example.org/jobs/123',content:'<p>Build software</p>'},{id:124,title:'Engineer',location:{name:'London'},absolute_url:'https://example.org/jobs/124'}]};const a=normalize(source,raw),b=normalize(source,raw);assert.equal(a.length,1);assert.equal(a[0].id,b[0].id);assert.equal(a[0].kind,'实习');assert.equal(a[0].description,'Build software')});
+test('invalid feeds do not become empty success',()=>{assert.throws(()=>normalize(SOURCES[0],{}));assert.throws(()=>normalize(SOURCES[0],{jobs:[{id:1,title:'x',absolute_url:'javascript:alert(1)'}]}))});
