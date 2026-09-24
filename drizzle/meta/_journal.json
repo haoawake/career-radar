@@ -8,6 +8,34 @@
       "when": 1788927231560,
       "tag": "0000_omniscient_cargill",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1788928286312,
+      "tag": "0001_ambiguous_lifeguard",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1788931670421,
+      "tag": "0002_vengeful_daimon_hellstrom",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1788937829606,
+      "tag": "0003_calm_vanisher",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1789015600918,
+      "tag": "0004_cuddly_veda",
+      "breakpoints": true
     }
   ]
 }

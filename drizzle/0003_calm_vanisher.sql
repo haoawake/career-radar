@@ -1,0 +1,1 @@
+CREATE INDEX `jobs_first_seen_id` ON `jobs` (`first_seen`,`id`);

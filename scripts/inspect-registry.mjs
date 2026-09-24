@@ -1,0 +1,1 @@
+import fs from 'node:fs';const a=JSON.parse(fs.readFileSync('lib/company-sources.json'));for(const id of ['rtx','verizon','accenture','micron','cvs-health']){const s=a.find(x=>x.id===id);console.log(id,JSON.stringify(s.appliedFacets).length,s.usFiltered,s.scope)}

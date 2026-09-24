@@ -1,0 +1,1 @@
+export type Source={id:string;name:string;type:string;group:string;careerUrl:string;tier?:string;host?:string;tenant?:string;board?:string;appliedFacets?:Record<string,string[]>;usFiltered?:boolean;scope?:string};

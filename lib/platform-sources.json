@@ -1,0 +1,3122 @@
+[
+ {
+  "id": "applovin",
+  "name": "AppLovin",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "applovin",
+  "careerUrl": "https://boards.greenhouse.io/applovin",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "amplitude",
+  "name": "Amplitude ",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "amplitude",
+  "careerUrl": "https://boards.greenhouse.io/amplitude",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "figma",
+  "name": "Figma",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "figma",
+  "careerUrl": "https://boards.greenhouse.io/figma",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "discord",
+  "name": "Discord",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "discord",
+  "careerUrl": "https://boards.greenhouse.io/discord",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "airtable",
+  "name": "Airtable",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "airtable",
+  "careerUrl": "https://boards.greenhouse.io/airtable",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "affirm",
+  "name": "Affirm",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "affirm",
+  "careerUrl": "https://boards.greenhouse.io/affirm",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "cloudflare",
+  "careerUrl": "https://boards.greenhouse.io/cloudflare",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "reddit",
+  "name": "Reddit",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "reddit",
+  "careerUrl": "https://boards.greenhouse.io/reddit",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "airbnb",
+  "name": "Airbnb",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "airbnb",
+  "careerUrl": "https://boards.greenhouse.io/airbnb",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "asana",
+  "name": "Asana",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "asana",
+  "careerUrl": "https://boards.greenhouse.io/asana",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "stripe",
+  "name": "Stripe",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "stripe",
+  "careerUrl": "https://boards.greenhouse.io/stripe",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "anthropic",
+  "name": "Anthropic",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "anthropic",
+  "careerUrl": "https://boards.greenhouse.io/anthropic",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "attentive",
+  "name": "Attentive",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "attentive",
+  "careerUrl": "https://boards.greenhouse.io/attentive",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "bitgo",
+  "name": "BitGo",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "bitgo",
+  "careerUrl": "https://boards.greenhouse.io/bitgo",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "blend",
+  "name": "Blend",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "blend",
+  "careerUrl": "https://boards.greenhouse.io/blend",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "braze",
+  "name": "Braze",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "braze",
+  "careerUrl": "https://boards.greenhouse.io/braze",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "block",
+  "name": "Block",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "block",
+  "careerUrl": "https://boards.greenhouse.io/block",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "bungie",
+  "name": "Bungie",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "bungie",
+  "careerUrl": "https://boards.greenhouse.io/bungie",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "brex",
+  "name": "Brex",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "brex",
+  "careerUrl": "https://boards.greenhouse.io/brex",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "calendly",
+  "name": "Calendly",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "calendly",
+  "careerUrl": "https://boards.greenhouse.io/calendly",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "carta",
+  "name": "Carta",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "carta",
+  "careerUrl": "https://boards.greenhouse.io/carta",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "checkr",
+  "name": "Checkr",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "checkr",
+  "careerUrl": "https://boards.greenhouse.io/checkr",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cribl",
+  "name": "Cribl",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "cribl",
+  "careerUrl": "https://boards.greenhouse.io/cribl",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "coalition-inc",
+  "name": "Coalition, Inc.",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "coalition",
+  "careerUrl": "https://boards.greenhouse.io/coalition",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cockroach-labs",
+  "name": "Cockroach Labs",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "cockroachlabs",
+  "careerUrl": "https://boards.greenhouse.io/cockroachlabs",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "coursera",
+  "name": "Coursera",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "coursera",
+  "careerUrl": "https://boards.greenhouse.io/coursera",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "coinbase",
+  "name": "Coinbase",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "coinbase",
+  "careerUrl": "https://boards.greenhouse.io/coinbase",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "chime-financial-inc",
+  "name": "Chime Financial, Inc",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "chime",
+  "careerUrl": "https://boards.greenhouse.io/chime",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "datadog",
+  "name": "Datadog",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "datadog",
+  "careerUrl": "https://boards.greenhouse.io/datadog",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "descript",
+  "name": "Descript",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "descript",
+  "careerUrl": "https://boards.greenhouse.io/descript",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "doximity",
+  "name": "Doximity",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "doximity",
+  "careerUrl": "https://boards.greenhouse.io/doximity",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "dropbox",
+  "name": "Dropbox",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "dropbox",
+  "careerUrl": "https://boards.greenhouse.io/dropbox",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "duolingo",
+  "name": "Duolingo",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "duolingo",
+  "careerUrl": "https://boards.greenhouse.io/duolingo",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "elastic",
+  "name": "Elastic",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "elastic",
+  "careerUrl": "https://boards.greenhouse.io/elastic",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "faire",
+  "name": "Faire",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "faire",
+  "careerUrl": "https://boards.greenhouse.io/faire",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "fastly",
+  "name": "Fastly",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "fastly",
+  "careerUrl": "https://boards.greenhouse.io/fastly",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "fivetran",
+  "name": "Fivetran ",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "fivetran",
+  "careerUrl": "https://boards.greenhouse.io/fivetran",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "forter",
+  "name": "Forter",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "forter",
+  "careerUrl": "https://boards.greenhouse.io/forter",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "flexport",
+  "name": "Flexport",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "flexport",
+  "careerUrl": "https://boards.greenhouse.io/flexport",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "gitlab",
+  "name": "GitLab",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "gitlab",
+  "careerUrl": "https://boards.greenhouse.io/gitlab",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "grafana-labs",
+  "name": "Grafana Labs",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "grafanalabs",
+  "careerUrl": "https://boards.greenhouse.io/grafanalabs",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "greenhouse",
+  "name": "Greenhouse",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "greenhouse",
+  "careerUrl": "https://boards.greenhouse.io/greenhouse",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "gusto-inc",
+  "name": "Gusto, Inc.",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "gusto",
+  "careerUrl": "https://boards.greenhouse.io/gusto",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "human-interest",
+  "name": "Human Interest",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "humaninterest",
+  "careerUrl": "https://boards.greenhouse.io/humaninterest",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "ixl-learning",
+  "name": "IXL Learning",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "ixllearning",
+  "careerUrl": "https://boards.greenhouse.io/ixllearning",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "iterable",
+  "name": "Iterable",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "iterable",
+  "careerUrl": "https://boards.greenhouse.io/iterable",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "instacart",
+  "name": "Instacart",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "instacart",
+  "careerUrl": "https://boards.greenhouse.io/instacart",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "jane-street",
+  "name": "Jane Street",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "janestreet",
+  "careerUrl": "https://boards.greenhouse.io/janestreet",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "justworks",
+  "name": "Justworks",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "justworks",
+  "careerUrl": "https://boards.greenhouse.io/justworks",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lattice",
+  "name": "Lattice",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "lattice",
+  "careerUrl": "https://boards.greenhouse.io/lattice",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "klaviyo",
+  "name": "Klaviyo",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "klaviyo",
+  "careerUrl": "https://boards.greenhouse.io/klaviyo",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "launchdarkly",
+  "name": "LaunchDarkly",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "launchdarkly",
+  "careerUrl": "https://boards.greenhouse.io/launchdarkly",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lyft",
+  "name": "Lyft",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "lyft",
+  "careerUrl": "https://boards.greenhouse.io/lyft",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "mercury",
+  "name": "Mercury",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "mercury",
+  "careerUrl": "https://boards.greenhouse.io/mercury",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "motive",
+  "name": "Motive",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "motive",
+  "careerUrl": "https://boards.greenhouse.io/motive",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "mongodb",
+  "name": "MongoDB",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "mongodb",
+  "careerUrl": "https://boards.greenhouse.io/mongodb",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "mozilla",
+  "name": "Mozilla",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "mozilla",
+  "careerUrl": "https://boards.greenhouse.io/mozilla",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "netlify",
+  "name": "Netlify",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "netlify",
+  "careerUrl": "https://boards.greenhouse.io/netlify",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "narvar",
+  "name": "Narvar",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "narvar",
+  "careerUrl": "https://boards.greenhouse.io/narvar",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "nuro",
+  "name": "Nuro",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "nuro",
+  "careerUrl": "https://boards.greenhouse.io/nuro",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "pagerduty",
+  "name": "PagerDuty",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "pagerduty",
+  "careerUrl": "https://boards.greenhouse.io/pagerduty",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "peloton",
+  "name": "Peloton",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "peloton",
+  "careerUrl": "https://boards.greenhouse.io/peloton",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "pendo",
+  "name": "Pendo",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "pendo",
+  "careerUrl": "https://boards.greenhouse.io/pendo",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "pinterest",
+  "name": "Pinterest",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "pinterest",
+  "careerUrl": "https://boards.greenhouse.io/pinterest",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "planetscale",
+  "name": "PlanetScale",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "planetscale",
+  "careerUrl": "https://boards.greenhouse.io/planetscale",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "postman",
+  "name": "Postman",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "postman",
+  "careerUrl": "https://boards.greenhouse.io/postman",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "postscript",
+  "name": "Postscript",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "postscript",
+  "careerUrl": "https://boards.greenhouse.io/postscript",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "qualtrics",
+  "name": "Qualtrics",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "qualtrics",
+  "careerUrl": "https://boards.greenhouse.io/qualtrics",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "robinhood",
+  "name": "Robinhood",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "robinhood",
+  "careerUrl": "https://boards.greenhouse.io/robinhood",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "roblox",
+  "name": "Roblox",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "roblox",
+  "careerUrl": "https://boards.greenhouse.io/roblox",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "roku",
+  "name": "Roku",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "roku",
+  "careerUrl": "https://boards.greenhouse.io/roku",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "rubrik-job-board",
+  "name": "Rubrik Job Board",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "rubrik",
+  "careerUrl": "https://boards.greenhouse.io/rubrik",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "samsara",
+  "name": "Samsara",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "samsara",
+  "careerUrl": "https://boards.greenhouse.io/samsara",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "scale-ai",
+  "name": "Scale AI",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "scaleai",
+  "careerUrl": "https://boards.greenhouse.io/scaleai",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "smartsheet",
+  "name": "Smartsheet",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "smartsheet",
+  "careerUrl": "https://boards.greenhouse.io/smartsheet",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sofi",
+  "name": "SoFi",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "sofi",
+  "careerUrl": "https://boards.greenhouse.io/sofi",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "spacex",
+  "name": "SpaceX",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "spacex",
+  "careerUrl": "https://boards.greenhouse.io/spacex",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "squarespace",
+  "name": "Squarespace",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "squarespace",
+  "careerUrl": "https://boards.greenhouse.io/squarespace",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sumo-logic",
+  "name": "Sumo Logic",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "sumologic",
+  "careerUrl": "https://boards.greenhouse.io/sumologic",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "tanium",
+  "name": "Tanium",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "tanium",
+  "careerUrl": "https://boards.greenhouse.io/tanium",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "toast",
+  "name": "Toast",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "toast",
+  "careerUrl": "https://boards.greenhouse.io/toast",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "tripadvisor",
+  "name": "Tripadvisor",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "tripadvisor",
+  "careerUrl": "https://boards.greenhouse.io/tripadvisor",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "twilio",
+  "name": "Twilio",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "twilio",
+  "careerUrl": "https://boards.greenhouse.io/twilio",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "twitch",
+  "name": "Twitch",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "twitch",
+  "careerUrl": "https://boards.greenhouse.io/twitch",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "udemy",
+  "name": "Udemy",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "udemy",
+  "careerUrl": "https://boards.greenhouse.io/udemy",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "upstart",
+  "name": "Upstart",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "upstart",
+  "careerUrl": "https://boards.greenhouse.io/upstart",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "upwork",
+  "name": "Upwork",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "upwork",
+  "careerUrl": "https://boards.greenhouse.io/upwork",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "verkada",
+  "name": "Verkada",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "verkada",
+  "careerUrl": "https://boards.greenhouse.io/verkada",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "vercel",
+  "name": "Vercel",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "vercel",
+  "careerUrl": "https://boards.greenhouse.io/vercel",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "via",
+  "name": "Via",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "via",
+  "careerUrl": "https://boards.greenhouse.io/via",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "webflow",
+  "name": "Webflow",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "webflow",
+  "careerUrl": "https://boards.greenhouse.io/webflow",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "workato",
+  "name": "Workato",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "workato",
+  "careerUrl": "https://boards.greenhouse.io/workato",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "zocdoc",
+  "name": "Zocdoc",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "zocdoc",
+  "careerUrl": "https://boards.greenhouse.io/zocdoc",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "zscaler",
+  "name": "Zscaler",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "zscaler",
+  "careerUrl": "https://boards.greenhouse.io/zscaler",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lucid-motors",
+  "name": "Lucid Motors",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "lucidmotors",
+  "careerUrl": "https://boards.greenhouse.io/lucidmotors",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "waymo",
+  "name": "Waymo",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "waymo",
+  "careerUrl": "https://boards.greenhouse.io/waymo",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "riot-games",
+  "name": "Riot Games",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "riotgames",
+  "careerUrl": "https://boards.greenhouse.io/riotgames",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "epic-games",
+  "name": "Epic Games",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "epicgames",
+  "careerUrl": "https://boards.greenhouse.io/epicgames",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "okta",
+  "name": "Okta",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "okta",
+  "careerUrl": "https://boards.greenhouse.io/okta",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "rocket-lab-corporation",
+  "name": "Rocket Lab Corporation",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "rocketlab",
+  "careerUrl": "https://boards.greenhouse.io/rocketlab",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "motional",
+  "name": "Motional",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "motional",
+  "careerUrl": "https://boards.greenhouse.io/motional",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "figure",
+  "name": "Figure",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "figureai",
+  "careerUrl": "https://boards.greenhouse.io/figureai",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "agility-robotics",
+  "name": "Agility Robotics",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "agilityrobotics",
+  "careerUrl": "https://boards.greenhouse.io/agilityrobotics",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "inflection-ai",
+  "name": "Inflection AI",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "inflectionai",
+  "careerUrl": "https://boards.greenhouse.io/inflectionai",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "together-ai",
+  "name": "Together AI",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "togetherai",
+  "careerUrl": "https://boards.greenhouse.io/togetherai",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "graphcore",
+  "name": "Graphcore",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "graphcore",
+  "careerUrl": "https://boards.greenhouse.io/graphcore",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "tenstorrent",
+  "name": "Tenstorrent",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "tenstorrent",
+  "careerUrl": "https://boards.greenhouse.io/tenstorrent",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lightmatter",
+  "name": "Lightmatter",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "lightmatter",
+  "careerUrl": "https://boards.greenhouse.io/lightmatter",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "astera-labs",
+  "name": "Astera Labs",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "asteralabs",
+  "careerUrl": "https://boards.greenhouse.io/asteralabs",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "databento",
+  "name": "Databento",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "databento",
+  "careerUrl": "https://boards.greenhouse.io/databento",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "jump-trading",
+  "name": "Jump Trading",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "jumptrading",
+  "careerUrl": "https://boards.greenhouse.io/jumptrading",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "point72",
+  "name": "Point72 ",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "point72",
+  "careerUrl": "https://boards.greenhouse.io/point72",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "aqr",
+  "name": "AQR",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "aqr",
+  "careerUrl": "https://boards.greenhouse.io/aqr",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "khan-academy",
+  "name": "Khan Academy",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "khanacademy",
+  "careerUrl": "https://boards.greenhouse.io/khanacademy",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "akuna-capital",
+  "name": "Akuna Capital",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "akunacapital",
+  "careerUrl": "https://boards.greenhouse.io/akunacapital",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "skillsoft",
+  "name": "Skillsoft",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "skillsoft",
+  "careerUrl": "https://boards.greenhouse.io/skillsoft",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "udacity",
+  "name": "Udacity",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "udacity",
+  "careerUrl": "https://boards.greenhouse.io/udacity",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "newsela",
+  "name": "Newsela",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "newsela",
+  "careerUrl": "https://boards.greenhouse.io/newsela",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "2u",
+  "name": "2U",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "2u",
+  "careerUrl": "https://boards.greenhouse.io/2u",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "carvana",
+  "name": "Carvana",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "carvana",
+  "careerUrl": "https://boards.greenhouse.io/carvana",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cargurus",
+  "name": "CarGurus",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "cargurus",
+  "careerUrl": "https://boards.greenhouse.io/cargurus",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "adyen",
+  "name": "Adyen",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "adyen",
+  "careerUrl": "https://boards.greenhouse.io/adyen",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "payoneer",
+  "name": "Payoneer",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "payoneer",
+  "careerUrl": "https://boards.greenhouse.io/payoneer",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "wise-worksite-field-sales",
+  "name": "Wise Worksite Field Sales ",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "wise",
+  "careerUrl": "https://boards.greenhouse.io/wise",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "oportun",
+  "name": "Oportun",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "oportun",
+  "careerUrl": "https://boards.greenhouse.io/oportun",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "flatiron-health",
+  "name": "Flatiron Health",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "flatironhealth",
+  "careerUrl": "https://boards.greenhouse.io/flatironhealth",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "komodo-health",
+  "name": "Komodo Health",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "komodohealth",
+  "careerUrl": "https://boards.greenhouse.io/komodohealth",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "calm-com",
+  "name": "Calm.com",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "calm",
+  "careerUrl": "https://boards.greenhouse.io/calm",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "ura",
+  "name": "Ōura",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "oura",
+  "careerUrl": "https://boards.greenhouse.io/oura",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "life360",
+  "name": "Life360",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "life360",
+  "careerUrl": "https://boards.greenhouse.io/life360",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "talkspace",
+  "name": "Talkspace",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "talkspace",
+  "careerUrl": "https://boards.greenhouse.io/talkspace",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "betterhelp",
+  "name": "BetterHelp",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "betterhelp",
+  "careerUrl": "https://boards.greenhouse.io/betterhelp",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "ginkgo-bioworks-inc",
+  "name": "Ginkgo Bioworks Inc.",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "ginkgobioworks",
+  "careerUrl": "https://boards.greenhouse.io/ginkgobioworks",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "freenome",
+  "name": "Freenome",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "freenome",
+  "careerUrl": "https://boards.greenhouse.io/freenome",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "natera",
+  "name": "Natera",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "natera",
+  "careerUrl": "https://boards.greenhouse.io/natera",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "blueprint-medicines-a-sanofi-company",
+  "name": "Blueprint Medicines, a Sanofi company",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "blueprintmedicines",
+  "careerUrl": "https://boards.greenhouse.io/blueprintmedicines",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "oscar-health",
+  "name": "Oscar Health",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "oscar",
+  "careerUrl": "https://boards.greenhouse.io/oscar",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "one-medical",
+  "name": "One Medical",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "onemedical",
+  "careerUrl": "https://boards.greenhouse.io/onemedical",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "hearst",
+  "name": "Hearst",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "hearst",
+  "careerUrl": "https://boards.greenhouse.io/hearst",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "vox-media-group",
+  "name": "Vox Media Group",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "voxmedia",
+  "careerUrl": "https://boards.greenhouse.io/voxmedia",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "axios",
+  "name": "Axios",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "axios",
+  "careerUrl": "https://boards.greenhouse.io/axios",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "employment-opportunities-at-buzzfeed-inc",
+  "name": "Employment Opportunities at BuzzFeed, Inc.",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "buzzfeed",
+  "careerUrl": "https://boards.greenhouse.io/buzzfeed",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "wpp",
+  "name": "WPP",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "wpp",
+  "careerUrl": "https://boards.greenhouse.io/wpp",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "pubmatic",
+  "name": "PubMatic",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "pubmatic",
+  "careerUrl": "https://boards.greenhouse.io/pubmatic",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lg-electronics",
+  "name": "LG Electronics",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "lgelectronics",
+  "careerUrl": "https://boards.greenhouse.io/lgelectronics",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "new-relic",
+  "name": "New Relic",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "newrelic",
+  "careerUrl": "https://boards.greenhouse.io/newrelic",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "honeycomb-io",
+  "name": "Honeycomb.io",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "honeycomb",
+  "careerUrl": "https://boards.greenhouse.io/honeycomb",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "commvault",
+  "name": "Commvault",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "commvault",
+  "careerUrl": "https://boards.greenhouse.io/commvault",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "abnormal",
+  "name": "Abnormal",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "abnormalsecurity",
+  "careerUrl": "https://boards.greenhouse.io/abnormalsecurity",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "knowbe4",
+  "name": "KnowBe4",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "knowbe4",
+  "careerUrl": "https://boards.greenhouse.io/knowbe4",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "netskope",
+  "name": "Netskope",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "netskope",
+  "careerUrl": "https://boards.greenhouse.io/netskope",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "axonius",
+  "name": "Axonius",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "axonius",
+  "careerUrl": "https://boards.greenhouse.io/axonius",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "expel",
+  "name": "Expel",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "expel",
+  "careerUrl": "https://boards.greenhouse.io/expel",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "huntress",
+  "name": "Huntress",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "huntress",
+  "careerUrl": "https://boards.greenhouse.io/huntress",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "recorded-future",
+  "name": "Recorded Future",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "recordedfuture",
+  "careerUrl": "https://boards.greenhouse.io/recordedfuture",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "anaplan",
+  "name": "Anaplan",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "anaplan",
+  "careerUrl": "https://boards.greenhouse.io/anaplan",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "bill",
+  "name": "BILL",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "billcom",
+  "careerUrl": "https://boards.greenhouse.io/billcom",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "zuora",
+  "name": "Zuora",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "zuora",
+  "careerUrl": "https://boards.greenhouse.io/zuora",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "billtrust-us-careers",
+  "name": "Billtrust US Careers",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "billtrust",
+  "careerUrl": "https://boards.greenhouse.io/billtrust",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "jfrog",
+  "name": "JFrog",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "jfrog",
+  "careerUrl": "https://boards.greenhouse.io/jfrog",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "circleci",
+  "name": "CircleCI",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "circleci",
+  "careerUrl": "https://boards.greenhouse.io/circleci",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "yugabytedb",
+  "name": "YugabyteDB",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "yugabyte",
+  "careerUrl": "https://boards.greenhouse.io/yugabyte",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "singlestore",
+  "name": "SingleStore",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "singlestore",
+  "careerUrl": "https://boards.greenhouse.io/singlestore",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "neo4j",
+  "name": "Neo4j",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "neo4j",
+  "careerUrl": "https://boards.greenhouse.io/neo4j",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "starburst",
+  "name": "Starburst",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "starburst",
+  "careerUrl": "https://boards.greenhouse.io/starburst",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "dremio",
+  "name": "Dremio",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "dremio",
+  "careerUrl": "https://boards.greenhouse.io/dremio",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "imply",
+  "name": "Imply",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "imply",
+  "careerUrl": "https://boards.greenhouse.io/imply",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "streamnative",
+  "name": "StreamNative",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "streamnative",
+  "careerUrl": "https://boards.greenhouse.io/streamnative",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "algolia",
+  "name": "Algolia",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "algolia",
+  "careerUrl": "https://boards.greenhouse.io/algolia",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "mixpanel",
+  "name": "Mixpanel",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "mixpanel",
+  "careerUrl": "https://boards.greenhouse.io/mixpanel",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "customer-io",
+  "name": "Customer.io",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "customerio",
+  "careerUrl": "https://boards.greenhouse.io/customerio",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "bloomreach",
+  "name": "Bloomreach",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "bloomreach",
+  "careerUrl": "https://boards.greenhouse.io/bloomreach",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "five9",
+  "name": "Five9",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "five9",
+  "careerUrl": "https://boards.greenhouse.io/five9",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "nice",
+  "name": "NICE",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "nice",
+  "careerUrl": "https://boards.greenhouse.io/nice",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "dialpad",
+  "name": "Dialpad",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "dialpad",
+  "careerUrl": "https://boards.greenhouse.io/dialpad",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "vonage",
+  "name": "Vonage",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "vonage",
+  "careerUrl": "https://boards.greenhouse.io/vonage",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "bandwidth",
+  "name": "Bandwidth",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "bandwidth",
+  "careerUrl": "https://boards.greenhouse.io/bandwidth",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "wrike",
+  "name": "Wrike",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "wrike",
+  "careerUrl": "https://boards.greenhouse.io/wrike",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "salsify",
+  "name": "Salsify",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "salsify",
+  "careerUrl": "https://boards.greenhouse.io/salsify",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "syndigo",
+  "name": "Syndigo",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "syndigo",
+  "careerUrl": "https://boards.greenhouse.io/syndigo",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "commercetools",
+  "name": "commercetools",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "commercetools",
+  "careerUrl": "https://boards.greenhouse.io/commercetools",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "uber-freight",
+  "name": "Uber Freight",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "uberfreight",
+  "careerUrl": "https://boards.greenhouse.io/uberfreight",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "project44",
+  "name": "project44",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "project44",
+  "careerUrl": "https://boards.greenhouse.io/project44",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "fourkites",
+  "name": "FourKites",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "fourkites",
+  "careerUrl": "https://boards.greenhouse.io/fourkites",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "flexe",
+  "name": "Flexe",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "flexe",
+  "careerUrl": "https://boards.greenhouse.io/flexe",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "databricks",
+  "name": "Databricks",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "major",
+  "board": "databricks",
+  "careerUrl": "https://boards.greenhouse.io/databricks",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "nextdoor",
+  "name": "Nextdoor",
+  "type": "greenhouse",
+  "group": "platform",
+  "tier": "other",
+  "board": "nextdoor",
+  "careerUrl": "https://boards.greenhouse.io/nextdoor",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "notion",
+  "name": "Notion",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "notion",
+  "careerUrl": "https://jobs.ashbyhq.com/notion",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "perplexity",
+  "name": "Perplexity",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "perplexity",
+  "careerUrl": "https://jobs.ashbyhq.com/perplexity",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "ramp",
+  "name": "Ramp",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "ramp",
+  "careerUrl": "https://jobs.ashbyhq.com/ramp",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "openai",
+  "name": "OpenAI",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "openai",
+  "careerUrl": "https://jobs.ashbyhq.com/openai",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "benchling",
+  "name": "Benchling",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "benchling",
+  "careerUrl": "https://jobs.ashbyhq.com/benchling",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "betterup",
+  "name": "BetterUp",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "betterup",
+  "careerUrl": "https://jobs.ashbyhq.com/betterup",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cohere",
+  "name": "Cohere",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "cohere",
+  "careerUrl": "https://jobs.ashbyhq.com/cohere",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "confluent",
+  "name": "Confluent",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "confluent",
+  "careerUrl": "https://jobs.ashbyhq.com/confluent",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "clickup",
+  "name": "ClickUp",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "clickup",
+  "careerUrl": "https://jobs.ashbyhq.com/clickup",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "dave",
+  "name": "Dave",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "dave",
+  "careerUrl": "https://jobs.ashbyhq.com/dave",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "drata",
+  "name": "Drata",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "drata",
+  "careerUrl": "https://jobs.ashbyhq.com/drata",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "envoy",
+  "name": "Envoy",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "envoy",
+  "careerUrl": "https://jobs.ashbyhq.com/envoy",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "expensify",
+  "name": "Expensify",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "expensify",
+  "careerUrl": "https://jobs.ashbyhq.com/expensify",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "headway",
+  "name": "Headway",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "headway",
+  "careerUrl": "https://jobs.ashbyhq.com/headway",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "hopper",
+  "name": "Hopper",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "hopper",
+  "careerUrl": "https://jobs.ashbyhq.com/hopper",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "mapbox",
+  "name": "Mapbox",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "mapbox",
+  "careerUrl": "https://jobs.ashbyhq.com/mapbox",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "miro",
+  "name": "Miro",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "miro",
+  "careerUrl": "https://jobs.ashbyhq.com/miro",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "modern-treasury",
+  "name": "Modern Treasury",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "moderntreasury",
+  "careerUrl": "https://jobs.ashbyhq.com/moderntreasury",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "nerdwallet",
+  "name": "Nerdwallet",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "nerdwallet",
+  "careerUrl": "https://jobs.ashbyhq.com/nerdwallet",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "nylas",
+  "name": "Nylas",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "nylas",
+  "careerUrl": "https://jobs.ashbyhq.com/nylas",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "persona",
+  "name": "Persona",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "persona",
+  "careerUrl": "https://jobs.ashbyhq.com/persona",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "plaid",
+  "name": "Plaid",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "plaid",
+  "careerUrl": "https://jobs.ashbyhq.com/plaid",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "redis",
+  "name": "Redis",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "redis",
+  "careerUrl": "https://jobs.ashbyhq.com/redis",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "quora",
+  "name": "Quora",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "quora",
+  "careerUrl": "https://jobs.ashbyhq.com/quora",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sentry",
+  "name": "Sentry",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "sentry",
+  "careerUrl": "https://jobs.ashbyhq.com/sentry",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sierra",
+  "name": "Sierra",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "sierra",
+  "careerUrl": "https://jobs.ashbyhq.com/sierra",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sift",
+  "name": "Sift",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "sift",
+  "careerUrl": "https://jobs.ashbyhq.com/sift",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "skydio",
+  "name": "Skydio",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "skydio",
+  "careerUrl": "https://jobs.ashbyhq.com/skydio",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sondermind",
+  "name": "SonderMind",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "sondermind",
+  "careerUrl": "https://jobs.ashbyhq.com/sondermind",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "spoton",
+  "name": "SpotOn",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "spoton",
+  "careerUrl": "https://jobs.ashbyhq.com/spoton",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "shield-ai",
+  "name": "Shield AI",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "shield-ai",
+  "careerUrl": "https://jobs.ashbyhq.com/shield-ai",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "thumbtack",
+  "name": "Thumbtack",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "thumbtack",
+  "careerUrl": "https://jobs.ashbyhq.com/thumbtack",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "zapier",
+  "name": "Zapier",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "zapier",
+  "careerUrl": "https://jobs.ashbyhq.com/zapier",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "vanta",
+  "name": "Vanta",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "vanta",
+  "careerUrl": "https://jobs.ashbyhq.com/vanta",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "snowflake",
+  "name": "Snowflake",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "major",
+  "board": "snowflake",
+  "careerUrl": "https://jobs.ashbyhq.com/snowflake",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sisense",
+  "name": "Sisense",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "sisense",
+  "careerUrl": "https://jobs.ashbyhq.com/sisense",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "astra",
+  "name": "Astra",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "astra",
+  "careerUrl": "https://jobs.ashbyhq.com/astra",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "physical-intelligence",
+  "name": "Physical Intelligence",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "physicalintelligence",
+  "careerUrl": "https://jobs.ashbyhq.com/physicalintelligence",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "runway",
+  "name": "Runway",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "runway",
+  "careerUrl": "https://jobs.ashbyhq.com/runway",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "elevenlabs",
+  "name": "ElevenLabs",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "elevenlabs",
+  "careerUrl": "https://jobs.ashbyhq.com/elevenlabs",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cerebras",
+  "name": "Cerebras",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "cerebras",
+  "careerUrl": "https://jobs.ashbyhq.com/cerebras",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "shift",
+  "name": "Shift",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "shift",
+  "careerUrl": "https://jobs.ashbyhq.com/shift",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "nubank",
+  "name": "Nubank",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "nubank",
+  "careerUrl": "https://jobs.ashbyhq.com/nubank",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "cedar",
+  "name": "Cedar",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "cedar",
+  "careerUrl": "https://jobs.ashbyhq.com/cedar",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "strava",
+  "name": "Strava",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "strava",
+  "careerUrl": "https://jobs.ashbyhq.com/strava",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "whoop",
+  "name": "Whoop",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "whoop",
+  "careerUrl": "https://jobs.ashbyhq.com/whoop",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "insitro",
+  "name": "Insitro",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "insitro",
+  "careerUrl": "https://jobs.ashbyhq.com/insitro",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "hinge-health",
+  "name": "Hinge Health",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "hinge-health",
+  "careerUrl": "https://jobs.ashbyhq.com/hinge-health",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "color-health",
+  "name": "Color Health",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "color-health",
+  "careerUrl": "https://jobs.ashbyhq.com/color-health",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "morning-consult",
+  "name": "Morning Consult",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "morningconsult",
+  "careerUrl": "https://jobs.ashbyhq.com/morningconsult",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "astera",
+  "name": "Astera",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "astera",
+  "careerUrl": "https://jobs.ashbyhq.com/astera",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "illumio",
+  "name": "Illumio",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "illumio",
+  "careerUrl": "https://jobs.ashbyhq.com/illumio",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "xero",
+  "name": "Xero",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "xero",
+  "careerUrl": "https://jobs.ashbyhq.com/xero",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lightspeed",
+  "name": "Lightspeed",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "lightspeed",
+  "careerUrl": "https://jobs.ashbyhq.com/lightspeed",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "docker",
+  "name": "Docker",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "docker",
+  "careerUrl": "https://jobs.ashbyhq.com/docker",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "marqeta-inc",
+  "name": "Marqeta Inc",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "marqeta-inc",
+  "careerUrl": "https://jobs.ashbyhq.com/marqeta-inc",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "render",
+  "name": "Render",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "render",
+  "careerUrl": "https://jobs.ashbyhq.com/render",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "railway",
+  "name": "Railway",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "railway",
+  "careerUrl": "https://jobs.ashbyhq.com/railway",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "supabase",
+  "name": "Supabase",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "supabase",
+  "careerUrl": "https://jobs.ashbyhq.com/supabase",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "neon",
+  "name": "Neon",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "neon",
+  "careerUrl": "https://jobs.ashbyhq.com/neon",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "influxdata",
+  "name": "InfluxData",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "influxdata",
+  "careerUrl": "https://jobs.ashbyhq.com/influxdata",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "astronomer",
+  "name": "Astronomer",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "astronomer",
+  "careerUrl": "https://jobs.ashbyhq.com/astronomer",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "materialize",
+  "name": "Materialize",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "materialize",
+  "careerUrl": "https://jobs.ashbyhq.com/materialize",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "prefect",
+  "name": "Prefect",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "prefect",
+  "careerUrl": "https://jobs.ashbyhq.com/prefect",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "langchain",
+  "name": "LangChain",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "langchain",
+  "careerUrl": "https://jobs.ashbyhq.com/langchain",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "pinecone",
+  "name": "Pinecone",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "pinecone",
+  "careerUrl": "https://jobs.ashbyhq.com/pinecone",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "weaviate",
+  "name": "Weaviate",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "weaviate",
+  "careerUrl": "https://jobs.ashbyhq.com/weaviate",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "llamaindex",
+  "name": "LlamaIndex",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "llamaindex",
+  "careerUrl": "https://jobs.ashbyhq.com/llamaindex",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "fullstory",
+  "name": "FullStory",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "fullstory",
+  "careerUrl": "https://jobs.ashbyhq.com/fullstory",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "clickhouse",
+  "name": "ClickHouse",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "clickhouse",
+  "careerUrl": "https://jobs.ashbyhq.com/clickhouse",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "iterable-inc",
+  "name": "Iterable Inc",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "iterable",
+  "careerUrl": "https://jobs.ashbyhq.com/iterable",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "linear",
+  "name": "Linear",
+  "type": "ashby",
+  "group": "platform",
+  "tier": "other",
+  "board": "linear",
+  "careerUrl": "https://jobs.ashbyhq.com/linear",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "houzz",
+  "name": "Houzz",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "houzz",
+  "careerUrl": "https://jobs.lever.co/houzz",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "getty-images",
+  "name": "Getty Images",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "gettyimages",
+  "careerUrl": "https://jobs.lever.co/gettyimages",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "linkedin",
+  "name": "LinkedIn",
+  "type": "lever",
+  "group": "platform",
+  "tier": "major",
+  "board": "linkedin",
+  "careerUrl": "https://jobs.lever.co/linkedin",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "outreach",
+  "name": "Outreach",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "outreach",
+  "careerUrl": "https://jobs.lever.co/outreach",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "match-group",
+  "name": "Match Group",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "matchgroup",
+  "careerUrl": "https://jobs.lever.co/matchgroup",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "palantir",
+  "name": "Palantir",
+  "type": "lever",
+  "group": "platform",
+  "tier": "major",
+  "board": "palantir",
+  "careerUrl": "https://jobs.lever.co/palantir",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "spotify",
+  "name": "Spotify",
+  "type": "lever",
+  "group": "platform",
+  "tier": "major",
+  "board": "spotify",
+  "careerUrl": "https://jobs.lever.co/spotify",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sysdig",
+  "name": "Sysdig",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "sysdig",
+  "careerUrl": "https://jobs.lever.co/sysdig",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "wealthfront",
+  "name": "Wealthfront",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "wealthfront",
+  "careerUrl": "https://jobs.lever.co/wealthfront",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "veeva",
+  "name": "Veeva",
+  "type": "lever",
+  "group": "platform",
+  "tier": "major",
+  "board": "veeva",
+  "careerUrl": "https://jobs.lever.co/veeva",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "zoox",
+  "name": "Zoox",
+  "type": "lever",
+  "group": "platform",
+  "tier": "major",
+  "board": "zoox",
+  "careerUrl": "https://jobs.lever.co/zoox",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "weride",
+  "name": "WeRide",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "weride",
+  "careerUrl": "https://jobs.lever.co/weride",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "included-health",
+  "name": "Included Health",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "includedhealth",
+  "careerUrl": "https://jobs.lever.co/includedhealth",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "alltrails",
+  "name": "AllTrails",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "alltrails",
+  "careerUrl": "https://jobs.lever.co/alltrails",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "ro",
+  "name": "Ro",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "ro",
+  "careerUrl": "https://jobs.lever.co/ro",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "lyra-health",
+  "name": "Lyra Health",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "lyrahealth",
+  "careerUrl": "https://jobs.lever.co/lyrahealth",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "metlife",
+  "name": "MetLife",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "metlife",
+  "careerUrl": "https://jobs.lever.co/metlife",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "sophos",
+  "name": "Sophos",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "sophos",
+  "careerUrl": "https://jobs.lever.co/sophos",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "coupa",
+  "name": "Coupa",
+  "type": "lever",
+  "group": "platform",
+  "tier": "major",
+  "board": "coupa",
+  "careerUrl": "https://jobs.lever.co/coupa",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "zilliz",
+  "name": "Zilliz",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "zilliz",
+  "careerUrl": "https://jobs.lever.co/zilliz",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "contentsquare",
+  "name": "Contentsquare",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "contentsquare",
+  "careerUrl": "https://jobs.lever.co/contentsquare",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "quantum-metric",
+  "name": "Quantum Metric",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "quantummetric",
+  "careerUrl": "https://jobs.lever.co/quantummetric",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "loadsmart",
+  "name": "Loadsmart",
+  "type": "lever",
+  "group": "platform",
+  "tier": "other",
+  "board": "loadsmart",
+  "careerUrl": "https://jobs.lever.co/loadsmart",
+  "scope": "美国岗位（逐条识别美国地点）"
+ },
+ {
+  "id": "canva",
+  "name": "Canva",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "canva",
+  "careerUrl": "https://jobs.smartrecruiters.com/canva",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "glean",
+  "name": "Glean",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "glean",
+  "careerUrl": "https://jobs.smartrecruiters.com/glean",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "gong",
+  "name": "GONG!",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "gong",
+  "careerUrl": "https://jobs.smartrecruiters.com/gong",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "servicenow",
+  "name": "ServiceNow",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "servicenow",
+  "careerUrl": "https://jobs.smartrecruiters.com/servicenow",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "arista-networks",
+  "name": "Arista Networks",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "aristanetworks",
+  "careerUrl": "https://jobs.smartrecruiters.com/aristanetworks",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "western-digital",
+  "name": "Western Digital",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "westerndigital",
+  "careerUrl": "https://jobs.smartrecruiters.com/westerndigital",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "uber",
+  "name": "Uber",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "uber",
+  "careerUrl": "https://jobs.smartrecruiters.com/uber",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "wayfair",
+  "name": "Wayfair",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "wayfair",
+  "careerUrl": "https://jobs.smartrecruiters.com/wayfair",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "abbvie",
+  "name": "AbbVie",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "major",
+  "board": "abbvie",
+  "careerUrl": "https://jobs.smartrecruiters.com/abbvie",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "domino-s",
+  "name": "Domino's",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "dominos",
+  "careerUrl": "https://jobs.smartrecruiters.com/dominos",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "cencora",
+  "name": "Cencora",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "cencora",
+  "careerUrl": "https://jobs.smartrecruiters.com/cencora",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "alnylam",
+  "name": "Alnylam",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "alnylam",
+  "careerUrl": "https://jobs.smartrecruiters.com/alnylam",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "privia-health",
+  "name": "Privia Health",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "priviahealth",
+  "careerUrl": "https://jobs.smartrecruiters.com/priviahealth",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "devoted-health",
+  "name": "Devoted Health",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "devotedhealth",
+  "careerUrl": "https://jobs.smartrecruiters.com/devotedhealth",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "fortune-brands",
+  "name": "Fortune Brands",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "fortunebrands",
+  "careerUrl": "https://jobs.smartrecruiters.com/fortunebrands",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "turner-construction",
+  "name": "Turner Construction",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "turnerconstruction",
+  "careerUrl": "https://jobs.smartrecruiters.com/turnerconstruction",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "celanese",
+  "name": "celanese",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "celanese",
+  "careerUrl": "https://jobs.smartrecruiters.com/celanese",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "olin",
+  "name": "OLIN",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "olin",
+  "careerUrl": "https://jobs.smartrecruiters.com/olin",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "avery-dennison",
+  "name": "Avery Dennison",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "averydennison",
+  "careerUrl": "https://jobs.smartrecruiters.com/averydennison",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "freeport-mcmoran",
+  "name": "Freeport-McMoRan",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "freeport-mcmoran",
+  "careerUrl": "https://jobs.smartrecruiters.com/freeport-mcmoran",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "accor",
+  "name": "Accor",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "accor",
+  "careerUrl": "https://jobs.smartrecruiters.com/accor",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "wynn-resorts",
+  "name": "Wynn Resorts",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "wynnresorts",
+  "careerUrl": "https://jobs.smartrecruiters.com/wynnresorts",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "norwegian-cruise-line",
+  "name": "Norwegian Cruise Line",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "norwegiancruiseline",
+  "careerUrl": "https://jobs.smartrecruiters.com/norwegiancruiseline",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "news-corp",
+  "name": "News Corp",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "newscorp",
+  "careerUrl": "https://jobs.smartrecruiters.com/newscorp",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "experian",
+  "name": "Experian",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "experian",
+  "careerUrl": "https://jobs.smartrecruiters.com/experian",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "sodexo",
+  "name": "Sodexo",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "sodexo",
+  "careerUrl": "https://jobs.smartrecruiters.com/sodexo",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "securitas",
+  "name": "Securitas",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "securitas",
+  "careerUrl": "https://jobs.smartrecruiters.com/securitas",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "iron-mountain",
+  "name": "Iron Mountain",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "ironmountain",
+  "careerUrl": "https://jobs.smartrecruiters.com/ironmountain",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "kioxia",
+  "name": "Kioxia",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "kioxia",
+  "careerUrl": "https://jobs.smartrecruiters.com/kioxia",
+  "scope": "美国岗位（按来源国家字段识别）"
+ },
+ {
+  "id": "armis",
+  "name": "Armis",
+  "type": "smartrecruiters",
+  "group": "platform",
+  "tier": "other",
+  "board": "armis",
+  "careerUrl": "https://jobs.smartrecruiters.com/armis",
+  "scope": "美国岗位（按来源国家字段识别）"
+ }
+]

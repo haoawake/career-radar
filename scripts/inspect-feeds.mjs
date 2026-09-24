@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+const a=JSON.parse(fs.readFileSync('outputs/research/workday-probes.json'));
+function flatten(f){return f.flatMap(x=>[x,...(x.values?flatten(x.values):[])])}
+for(const x of a.filter(x=>x.valid)){const country=flatten(x.facets||[]).find(f=>f.values?.some(v=>/^United States( of America)?$/i.test(v.descriptor)));const us=country?.values.find(v=>/^United States( of America)?$/i.test(v.descriptor));console.log(x.name,x.host,x.board,'US',country?.facetParameter,us?.id,us?.count)}
+const ms=JSON.parse(fs.readFileSync('outputs/research/microsoft.txt')).data;console.log('MS keys',Object.keys(ms),Object.fromEntries(Object.entries(ms).filter(([k,v])=>typeof v!=='object')));
+const google=fs.readFileSync('outputs/research/google.txt','utf8');const m=google.match(/key: 'ds:1', hash: '[^']*', data:([\s\S]*?), sideChannel:/);if(m){const d=JSON.parse(m[1]);fs.writeFileSync('outputs/research/google-data.json',JSON.stringify(d,null,2));console.log('GOOGLE',d.map(x=>Array.isArray(x)?['array',x.length]:x));console.log('first',JSON.stringify(d[0][0]).slice(0,9000))}
+const apple=fs.readFileSync('outputs/research/apple.txt','utf8');console.log('APPLE scripts',Array.from(apple.matchAll(/<script[^>]*>/g),x=>x[0]).slice(-15));for(const word of ['initialState','INITIAL','searchResults','totalRecords','searchResult']){let i=apple.indexOf(word);if(i>=0)console.log(word,apple.slice(Math.max(0,i-70),i+200))}
