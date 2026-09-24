@@ -1,6 +1,7 @@
 import companySources from './company-sources.json' with { type: 'json' };
 import platformSources from './platform-sources.json' with { type: 'json' };
 import type { Source } from './source-types';
+import { signals } from './job-signals';
 // 四家自建招聘系统单独实现，其余来源由注册表提供。
 const CUSTOM:Source[]=['amazon','microsoft','google','apple'].map((id,i)=>({id,name:['Amazon','Microsoft','Google','Apple'][i],type:id,group:'company',tier:'major',careerUrl:['https://www.amazon.jobs/','https://apply.careers.microsoft.com/','https://www.google.com/about/careers/applications/jobs/results/','https://jobs.apple.com/'][i],scope:id==='amazon'?'美国 · 软件、数据、产品、设计、营销与 IT 类别':'美国岗位'}));
 export const SOURCES:Source[]=[...platformSources as unknown as Source[],...companySources as unknown as Source[],...CUSTOM];
@@ -10,7 +11,8 @@ export function classify(title:string){
  if(/data|analytics|business intelligence/i.test(title))return '数据分析';
  if(/product manager|product management/i.test(title))return '产品经理';
  if(/design|\bUX\b|\bUI\b/i.test(title))return '设计';
- if(/engineer|developer|\bSRE\b|software/i.test(title))return '软件工程';
+ // 不带 engineer 字样的技术头衔：Member of Technical Staff、Programmer、DevOps、Solutions / Cloud Architect 等
+ if(/engineer|developer|\bSRE\b|software|programmer|devops|member of (the )?technical staff|\bSDE\b|\bSWE\b|\b(solutions?|cloud|systems|platform|enterprise|infrastructure) architect/i.test(title))return '软件工程';
  if(/marketing|growth|operations|content|community/i.test(title))return '市场 / 运营';
  return '其他';
 }
@@ -29,7 +31,8 @@ export function normalize(source:typeof SOURCES[number],payload:any){
  if(!payload||!Array.isArray(payload.jobs))throw Error('来源返回格式异常');
  return payload.jobs.map((j:any)=>{const ash=source.type==='ashby';const locations=ash?[j.location,...(j.secondaryLocations||[]).map((x:any)=>x.location)].filter(Boolean).join(' / '):(j.location?.name||'');const country=ash?j.address?.postalAddress?.addressCountry:'';const url=secureUrl(ash?(j.applyUrl||j.jobUrl):j.absolute_url);
  if(!j.id||!j.title||!url)throw Error('岗位数据不完整');
- return {id:source.id+':'+j.id,source:source.id,company:source.name,title:j.title,location:locations,url,description:plain(ash?(j.descriptionPlain||j.descriptionHtml||''):(j.content||'')),role:classify(j.title),kind:/\bintern(ship)?\b|co-op/i.test(j.title+' '+(j.employmentType||''))?'实习':'正式 / 其他',us:isUS(locations,country)};}).filter((j:any)=>j.us);
+ const description=plain(ash?(j.descriptionPlain||j.descriptionHtml||''):(j.content||'')),kind=/\bintern(ship)?\b|co-op/i.test(j.title+' '+(j.employmentType||''))?'实习':'正式 / 其他';
+ return {id:source.id+':'+j.id,source:source.id,company:source.name,title:j.title,location:locations,url,description,role:classify(j.title),kind,...signals(j.title,kind,description),us:isUS(locations,country)};}).filter((j:any)=>j.us);
 }
 
 

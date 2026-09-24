@@ -32,6 +32,17 @@ try {
  # 以免连带丢掉重点与投递记录。真正防重复的断言是上面两次同步计数相等。
  if($after.total -lt $s2.count){throw "Stored count lower than sync result: $($after.total) vs $($s2.count)"}
 
+ # 级别与签证：同步完成后每条岗位都有级别，有描述的都有签证判断；签证各类别（含「暂无描述」）恰好划分全集
+ $missingLevel=($after.jobs | Where-Object {-not $_.level}).Count
+ if($missingLevel){throw "$missingLevel figma jobs have no level after sync"}
+ $unjudged=($after.jobs | Where-Object {$_.description -and -not $_.visa}).Count
+ if($unjudged){throw "$unjudged described figma jobs have no visa verdict"}
+ $q={param($k,$v) (Invoke-RestMethod "$base/api/jobs?company=figma&$k=$([uri]::EscapeDataString($v))").total}
+ $visaSum=0;foreach($v in @('可提供担保','未提及','不提供担保','限公民 / 绿卡','需安全许可','暂无描述')){$visaSum+=& $q 'visa' $v}
+ if($visaSum -ne $after.total){throw "Visa categories do not partition figma jobs: $visaSum vs $($after.total)"}
+ $open=& $q 'visa' '排除签证受限';$notSenior=& $q 'level' '排除资深'
+ if($open -gt $after.total -or $notSenior -gt $after.total){throw 'Exclusion filters widened the result set'}
+
  # 地区筛选：都会区与城市各自收窄结果，且城市不会多于所属都会区
  $all=Invoke-RestMethod "$base/api/jobs"
  $facets=Invoke-RestMethod "$base/api/overview?fresh=1"
@@ -52,7 +63,7 @@ try {
  if($c.total -le 0 -or $p.total -le 0){throw 'A source category returned nothing'}
  if($facets.stats.company + $facets.stats.platform -ne $facets.stats.total){throw 'Some jobs belong to no registered source'}
  if($facets.sources.Count -le 0){throw 'Overview returned no sources'}
- Write-Output "PASS: $($all.total) live jobs; figma 重复同步 $($s1.count)=$($s2.count); $describedAfter/$($after.jobs.Count) 条带描述; $metro -> $($inMetro.total), $city -> $($inCity.total); company $($c.total) + platform $($p.total); marks and first-seen preserved."
+ Write-Output "PASS: $($all.total) live jobs; figma 重复同步 $($s1.count)=$($s2.count); $describedAfter/$($after.jobs.Count) 条带描述; figma 签证分类合计 $visaSum=$($after.total), 排除签证受限 $open, 排除资深 $notSenior; $metro -> $($inMetro.total), $city -> $($inCity.total); company $($c.total) + platform $($p.total); marks and first-seen preserved."
 } finally {
  foreach($field in @('starred','applied')){Invoke-RestMethod "$base/api/jobs" -Method Patch -ContentType 'application/json' -Body (ConvertTo-Json @{id=$j.id;field=$field;value=[bool]$j.$field}) | Out-Null}
 }

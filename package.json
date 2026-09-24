@@ -12,7 +12,7 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "db:generate": "drizzle-kit generate",
-    "test": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs --test tests/sources.test.mjs tests/resume.test.mjs"
+    "test": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs --test tests/sources.test.mjs tests/resume.test.mjs tests/signals.test.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

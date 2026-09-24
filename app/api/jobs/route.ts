@@ -8,7 +8,7 @@ export async function GET(r:Request){try{
  const {clauses,values}=baseClause(f);locationClause(f.metro,f.city,clauses,values);
  const where=whereOf(clauses),t0=Date.now();
  const [rows,total]=await Promise.all([
-  d.prepare('SELECT id,source,company,title,location,url,substr(description,1,2400) AS description,role,kind,first_seen,last_seen,active,starred,applied FROM jobs'+where+' ORDER BY first_seen DESC,id ASC LIMIT 30 OFFSET ?').bind(...values,(f.page-1)*30).all<any>(),
+  d.prepare('SELECT id,source,company,title,location,url,substr(description,1,2400) AS description,role,kind,level,visa,visa_note,first_seen,last_seen,active,starred,applied FROM jobs'+where+' ORDER BY first_seen DESC,id ASC LIMIT 30 OFFSET ?').bind(...values,(f.page-1)*30).all<any>(),
   d.prepare('SELECT count(*) AS n FROM jobs'+where).bind(...values).first<{n:number}>(),
  ]);
  return Response.json({jobs:rows.results||[],total:total?.n||0,page:f.page},{headers:{'Cache-Control':'no-store','Server-Timing':`rows;dur=${Date.now()-t0}`}});

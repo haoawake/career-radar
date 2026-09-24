@@ -10,7 +10,7 @@ export async function GET(r:Request){try{
  const url=new URL(r.url),raw=readFilters(url.searchParams);
  // 分面只跟来源分类与地区有关，不跟关键词、职业这些走：否则每敲一个字都要重算一次全表统计。
  // 代价是下拉里的数字表示“该分类该地区一共有多少岗位”，不随其他筛选变化——这样也更稳定好懂。
- const f={...raw,q:'',role:'',kind:'',view:'',company:''};
+ const f={...raw,q:'',role:'',kind:'',level:'',visa:'',view:'',company:''};
  const key=JSON.stringify([f.group,f.metro,f.city]);
  const hit=CACHE.get(key);
  if(hit&&Date.now()-hit.at<TTL&&url.searchParams.get('fresh')!=='1')return Response.json(hit.body,{headers:{'Cache-Control':'no-store','Server-Timing':'cache;dur=0'}});
