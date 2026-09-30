@@ -8,6 +8,11 @@ export const SCOPES=[
  {value:'all',label:'全部来源（强制重跑）',hint:'忽略更新时间，重新收集所有来源'},
 ];
 export const isFresh=(s:any)=>s.status==='ok'&&s.last_success&&Date.now()-Date.parse(s.last_success)<6*3600000;
+/** 来源分类：company / platform 按招聘系统类型分，major（精选大厂）按名单分，与前两者交叉。 */
+export const inGroup=(s:{group?:string;tier?:string},group:string)=>group==='all'||(group==='major'?s.tier==='major':s.group===group);
+type Ranked={tier?:string;jobCount?:number;name?:string};
+/** 来源排序：精选大厂在前，其次按已收录岗位数，再按名称。公司下拉框与来源目录都按这个顺序。 */
+export const bySize=(a:Ranked,b:Ranked)=>(b.tier==='major'?1:0)-(a.tier==='major'?1:0)||(b.jobCount||0)-(a.jobCount||0)||String(a.name).localeCompare(String(b.name));
 /** 按所选范围挑出这次要更新的来源；除“全部来源”外都会跳过刚更新过的。 */
 export function inScope(data:any,scope:string,group:string){
  const all=data.sources||[],region=data.regionCounts||{};
@@ -16,7 +21,7 @@ export function inScope(data:any,scope:string,group:string){
  if(scope==='region'&&!Object.keys(region).length)scope='stale';
  const picked=scope==='major'?all.filter((s:any)=>s.tier==='major')
   :scope==='region'?all.filter((s:any)=>region[s.id]||!s.last_success)
-  :scope==='group'?all.filter((s:any)=>group==='all'||s.group===group)
+  :scope==='group'?all.filter((s:any)=>inGroup(s,group))
   :scope==='marked'?all.filter((s:any)=>s.markedCount>0)
   :all;
  return picked.filter((s:any)=>!isFresh(s));
@@ -27,7 +32,9 @@ const PAGES_PER_SECOND=6.6;
 export function estimatePages(s:any){
  const total=s.run_total||s.count||0;
  if(['workday','google','apple'].includes(s.type))return Math.max(1,Math.ceil(total/20));
- if(['smartrecruiters','amazon','microsoft'].includes(s.type))return Math.max(1,Math.ceil(total/100));
+ if(['microsoft','eightfold'].includes(s.type))return Math.max(1,Math.ceil(total/10));
+ if(['successfactors','avature'].includes(s.type))return Math.max(1,Math.ceil(total/15));// 网页类每页 10–25 条
+ if(['smartrecruiters','amazon','oracle','jibe','ibm','mckinsey'].includes(s.type))return Math.max(1,Math.ceil(total/100));
  return 1;
 }
 /** 把一批来源换算成大致耗时文案。 */

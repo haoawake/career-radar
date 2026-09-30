@@ -1,9 +1,14 @@
+import { env } from 'cloudflare:workers';
 import { db,sameOrigin } from '@/lib/db';
 import { SOURCES } from '@/lib/sources';
 import { fetchPage,fetchDescriptions,DETAIL_TYPES,type Job } from '@/lib/connectors';
 import { level,visa } from '@/lib/job-signals';
 import type { Source } from '@/lib/source-types';
 import { locationFields } from '@/lib/us-locations';
+import { relayOrigin,type Relay } from '@/lib/node-relay';
+import { pruneStale } from '@/lib/prune';
+/** 开发环境里 vite.config.ts 注入的本机 Node 中转令牌；生产环境没有，返回 undefined，照旧直连。 */
+function relayOf(r:Request):Relay|undefined{const token=(env as unknown as {NODE_RELAY_TOKEN?:string}).NODE_RELAY_TOKEN;return token?{origin:relayOrigin(r.url),token}:undefined}
 const PAGE_BUDGET_MS=20000;// 单次调用最多连续抓取多久，剩下的交给下一次调用继续
 const DESCRIPTIONS_PER_RUN=120;// 单次调用最多补多少条描述，剩下的下一轮继续，直到补齐
 const BACKFILL_BUDGET_MS=4000;// 一轮完成后补算级别与签证字段的时间上限
@@ -62,24 +67,32 @@ export async function POST(r:Request){
  try{
   // 一次调用里连续抓多页：Workday 每页固定 20 条，逐页往返会让几百个来源的更新慢得没法用。
   const light=s.type==='greenhouse'&&!!(await d.prepare('SELECT 1 AS n FROM jobs WHERE source=? LIMIT 1').bind(s.id).first<{n:number}>());
+  const relay=s.via==='node'?relayOf(r):undefined;
   let described=0,throttled=false;
   for(;;){
-   const p=await fetchPage(s,offset,expected,{light});
+   // 站点在 robots.txt 里要求了抓取间隔（crawl-delay）的，每次请求前都先等够：同一来源同时只有一个调用持有租约，
+   // 这样上一次调用的最后一页与这一次的第一页之间也隔开了
+   if(s.delay)await new Promise(resolve=>setTimeout(resolve,s.delay));
+   const p=await fetchPage(s,offset,expected,{light,relay});
    if(offset>0&&p.fingerprint&&p.fingerprint===fingerprint)throw Error('来源重复返回同一页，更新未完成，历史岗位已保留');
    // 补详情被限流后，这次调用剩下的页都不再补，免得把后面的列表分页也拖进限流
-   if(!throttled&&DETAIL_TYPES.has(s.type)&&(s.type!=='greenhouse'||light)){const r=await fillDescriptions(d,s,p.jobs,DESCRIPTIONS_PER_RUN-described);described+=r.n;throttled=r.throttled}
+   // 要求了请求间隔的来源详情是串行按间隔发的，每页只补几条，免得一次调用拖过租约
+   if(!throttled&&DETAIL_TYPES.has(s.type)&&(s.type!=='greenhouse'||light)){const r=await fillDescriptions(d,s,p.jobs,Math.min(DESCRIPTIONS_PER_RUN-described,s.delay?Math.floor(PAGE_BUDGET_MS/4/s.delay):Infinity));described+=r.n;throttled=r.throttled}
    warning=p.warning||warning;fingerprint=p.fingerprint;total=p.total;expected=p.total;
    // 签证字段跟着描述走：这次没带描述（轻量列表、未补拉）时保留库里的描述，也保留据它算出的签证判断
-   const queries=p.jobs.map(j=>d.prepare('INSERT INTO jobs (id,source,company,title,location,url,description,role,kind,level,visa,visa_note,cities,states,metros,remote,first_seen,last_seen,active) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1) ON CONFLICT(id) DO UPDATE SET title=excluded.title,location=excluded.location,url=excluded.url,description=CASE WHEN length(excluded.description)>0 THEN excluded.description ELSE jobs.description END,visa=CASE WHEN length(excluded.description)>0 THEN excluded.visa ELSE jobs.visa END,visa_note=CASE WHEN length(excluded.description)>0 THEN excluded.visa_note ELSE jobs.visa_note END,role=excluded.role,kind=excluded.kind,level=excluded.level,cities=excluded.cities,states=excluded.states,metros=excluded.metros,remote=excluded.remote,last_seen=excluded.last_seen,active=1').bind(j.id,j.source,j.company,j.title,j.location,j.url,j.description,j.role,j.kind,j.level,j.visa,j.visaNote,j.cities,j.states,j.metros,j.remote,run,run));
+   const queries=p.jobs.map(j=>d.prepare('INSERT INTO jobs (id,source,company,title,location,url,description,role,kind,level,visa,visa_note,cities,states,metros,remote,first_seen,last_seen,active) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1) ON CONFLICT(id) DO UPDATE SET company=excluded.company,title=excluded.title,location=excluded.location,url=excluded.url,description=CASE WHEN length(excluded.description)>0 THEN excluded.description ELSE jobs.description END,visa=CASE WHEN length(excluded.description)>0 THEN excluded.visa ELSE jobs.visa END,visa_note=CASE WHEN length(excluded.description)>0 THEN excluded.visa_note ELSE jobs.visa_note END,role=excluded.role,kind=excluded.kind,level=excluded.level,cities=excluded.cities,states=excluded.states,metros=excluded.metros,remote=excluded.remote,last_seen=excluded.last_seen,active=1').bind(j.id,j.source,j.company,j.title,j.location,j.url,j.description,j.role,j.kind,j.level,j.visa,j.visaNote,j.cities,j.states,j.metros,j.remote,run,run));
    for(let i=0;i<queries.length;i+=40)await d.batch(queries.slice(i,i+40));
    pages++;
    if(p.next===null){
     count=(await d.prepare('SELECT count(*) AS n FROM jobs WHERE source=? AND last_seen=?').bind(s.id,run).first<{n:number}>())?.n||0;
     const finish=[d.prepare('UPDATE sources SET status=?,last_success=?,count=?,cursor=0,run_started=NULL,run_total=?,run_count=?,warning=?,fingerprint=NULL,error=NULL,lease_until=0 WHERE id=?').bind(warning?'partial':'ok',new Date().toISOString(),count,p.total,count,warning||null,s.id)];
     if(!warning)finish.unshift(d.prepare('UPDATE jobs SET active=0 WHERE source=? AND last_seen<>?').bind(s.id,run));
+    // 注册表里改过名的来源（例如 Bloomberg → Bloomberg Industry Group），已下架的旧岗位也跟着改
+    finish.push(d.prepare('UPDATE jobs SET company=? WHERE source=? AND company<>?').bind(s.name,s.id,s.name));
     await d.batch(finish);
+    const pruned=await pruneStale(d,s,run);
     const backfilled=await backfillLocations(d,s.id,run),signalled=await backfillSignals(d,s.id);
-    return Response.json({done:true,count,pages,warning,backfilled,signalled,described,throttled});
+    return Response.json({done:true,count,pages,warning,pruned,backfilled,signalled,described,throttled});
    }
    offset=p.next;
    await d.prepare('UPDATE sources SET status=?,cursor=?,run_started=?,run_total=?,run_count=?,fingerprint=?,warning=?,error=NULL,lease_until=? WHERE id=?').bind('syncing',offset,run,p.total,count,fingerprint,warning||null,Date.now()+120000,s.id).run();

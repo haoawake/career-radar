@@ -8,12 +8,43 @@
 
 来源分成两类，可在左侧单独切换：
 
-- **公司自建招聘系统（291 家）**：287 家公司自有的 Workday 企业招聘站，加上 Amazon、Microsoft、Google、Apple 四家完全自建的招聘系统。
-- **招聘平台托管职位（312 家）**：公司托管在 Greenhouse、Ashby、Lever、SmartRecruiters 上的官方招聘板。
+- **公司自建招聘系统（344 家）**：307 家 Workday 企业招聘站；30 家用企业级招聘系统的公司——Oracle 招聘云 11 家（Oracle、JPMorgan Chase、Goldman Sachs、American Express、Dell、Texas Instruments、Honeywell、Ford、onsemi、Akamai、Fortinet）、Eightfold 6 家（Lockheed Martin、Qualcomm、Lam Research、Boston Scientific、NetApp、Starbucks；Microsoft 也用 Eightfold 的接口）、iCIMS Jibe 4 家（AMD、Rivian、DocuSign、PepsiCo）、SAP SuccessFactors 5 家（SAP、McDonald's、Paramount、Gulfstream、NASSCO）、Avature 4 家（Bloomberg、Electronic Arts、Two Sigma、Deloitte）；以及 Amazon、Microsoft、Google、Apple、IBM、Atlassian、McKinsey 七家单独实现的自建招聘站。
+- **招聘平台托管职位（328 家）**：公司托管在 Greenhouse、Ashby、Lever、SmartRecruiters、Rippling 上的官方招聘板。
 
-合计 603 家公司，全部走官方公开接口。同一家公司只保留一个来源，优先取自建系统，避免同一岗位重复收录。来源目录页会注明每家公司使用的系统类型、收录范围与最近更新时间。
+合计 672 家公司，全部走官方公开接口。同一家公司只保留一个来源，优先取自建系统，避免同一岗位重复收录。来源目录页会注明每家公司使用的系统类型、收录范围与最近更新时间。
 
-来源清单由 `scripts/` 下的探测脚本生成：Workday 站点通过各租户的 `robots.txt` 发现后用官方接口验证，招聘板通过平台公开 API 逐一核对公司名。重新生成用 `node --experimental-strip-types scripts/make-registry.mjs`。
+另有一个按名单划分的「精选大厂」分类（205 家，含上面 7 家自建站），与前两类交叉。公司下拉框与来源目录按「大厂优先、岗位数从多到少」排序：原先按注册表顺序，四家自建站拼在六百多个来源的末尾，而下拉框不输入时只显示前 80 项，Google、Apple 永远轮不到；默认列表又按首次发现时间倒序，第一个 Google 岗位排在第 319 页，看起来就像没收录。
+
+来源清单由 `scripts/` 下的探测脚本生成：Workday 站点通过各租户的 `robots.txt` 发现后用官方接口验证，招聘板通过平台公开 API 逐一核对公司名。重新生成用 `node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/make-registry.mjs`，生成时会套用 `scripts/registry-fixes.mjs` 里的人工修正（见下一节）。
+
+## 注册表修正与新平台（2026-09-30）
+
+起因是「Google、Apple 这些大厂都没看到」。排查下来是四类问题叠在一起：
+
+- **有但看不见**：Google 其实一直在收录（1833 个在招美国岗位），被上面说的排序和下拉框截断埋住了。
+- **被拦**：Apple 一直报 403。
+- **连错**：按公司名猜招聘板地址，连到了招聘系统的测试账号（Uber 在 SmartRecruiters 上唯一的岗位叫 "Test UAT"，LinkedIn 在 Lever 上是 "BO Prim"、"Kritika Bug Bash Job 2"）、子公司（Bloomberg 连成了 Bloomberg Industry Group）、窄口径子站点（Chewy 连到兽医临时合同工站，Meijer 连到门店小时工站，Unilever、Invesco 连到校招站）。Hearst 的真实招聘板里混着 39 条 UAT 测试岗位。
+- **没接入**：精选大厂名单里有 80 多家不在注册表。原因一是 slug 与公司名对不上（DoorDash 是 `doordashusa`，Anduril 是 `andurilindustries`，Wiz 是 `wizinc`，Hudson River Trading 是 `wehrtyou`）；二是用的招聘系统此前没有连接器。
+
+修正都登记在 `scripts/registry-fixes.mjs`（补登、改连、改名、移除、换平台），单独运行即可联网核实并写回注册表，`make-registry.mjs` 重新生成时也会套用。新平台每家怎么接、有什么坑：
+
+- **Oracle 招聘云**（11 家）：`recruitingCEJobRequisitions` 公开接口，按实例里 United States 地点分面的编号筛美国（各实例不同，注册时从不带筛选的一次查询里取），每页 100 条；地点筛选也会带回主地点在国外、次要地点在美国的岗位，按国家代码再判一次。列表只有简介，完整描述走 `recruitingCEJobRequisitionDetails` 补拉。Akamai、Honeywell、Amex 的品牌域名不转发接口，请求源站，链接用品牌域名；apply.ford.com 的证书链不完整，用源站。
+- **Eightfold**：把 Microsoft 的 pcsx 接口改成通用连接器（host + domain），每页固定 10 条（原先的页数估算按 100 条算，低估了 10 倍）。NetApp 没开通 pcsx，用旧版 `/api/apply/v2`。Starbucks 美国两万个岗位里一万九千多个是门店岗位，只取门店以外的 14 个职位类别（393 个）；Lockheed Martin 五千多个里去掉生产制造与安保职能（约 2900 个）。
+- **iCIMS Jibe**：`/api/jobs` 按国家筛，列表自带完整描述。PepsiCo 的美国岗位分在 "United States" 与 "USA" 两种写法下。
+- **SuccessFactors / Avature**：只有服务端渲染的列表页。SuccessFactors 有表格行与卡片两种排版，同一个解析器处理；Avature 有的站点不写总数（Two Sigma、Deloitte），看分页链接里有没有更大的 `jobOffset` 决定是否还有下一页。两者都必须真的读到总数或岗位行，否则报错——单测里就抓到过一次：维护页没有总数标签时 `Number('')` 是 0，会被当成「共 0 个岗位、本轮完整结束」，把整家公司的历史岗位标成下架。
+- **Workday**：Eli Lilly 在 wd115、Vertex 在 wd501，猜不中；Snap、Microchip 在共享域名 `myworkdaysite.com` 上，岗位链接要写成 `/recruiting/{tenant}/{board}`，套常规格式会 500。没有国家筛选项的租户改按办公地点筛，地点编号上限从 80 放宽到 300（Merck 119 个、Thermo Fisher 270 个都能用，Comcast 的 418 个会让接口报 500，这类退回逐条识别）；Moderna 的地点筛选项叫 `primarylocation`，岗位也不带地点文字，地点从链接里的 `/job/Norwood-Massachusetts/…` 取。是否按职能大类收窄改为看美国岗位数（原先看全球总数，Thermo Fisher 会被收窄到只剩实习）。
+- **单独实现**：IBM（站内搜索接口，按 `_id` 排序，默认排序翻页会重复）、Atlassian（一次返回全部岗位）、McKinsey（一条岗位是一个岗位族，城市与国家是两个一一对应的数组）、Rippling（每个地点一行，按编号合并）。
+- **Greenhouse 地点**：Cloudflare 399 个岗位里 300 个地点写的是 "Hybrid"、51 个 "Distributed"，美国识别只认出 1 个。改为地点只写办公形式时用所属办公室的地址；轻量列表不带办公室，这时补拉一次 `/offices` 对照表（多数招聘板用不上，不多请求）。扫全部 187 块板，这类岗位共 658 个。Lever 改用 `country` 字段判断美国。
+- **测试岗位**：`isTestPosting` 只认很明显的写法（整条标题就是 Test/UAT、bug bash、this is a test、两侧都是连字符的 Test 段、全大写 TEST 夹在正常大小写标题里），Test Engineer、Test-Driven…、UAT Analyst、全大写的 SOFTWARE TEST ENGINEER 照常保留。
+- **数据整理**（`lib/prune.ts`）：一轮更新完成后，删掉没被标记过的测试岗位、以及 Workday 来源改连新站点后旧站点留下的岗位（按链接前缀判断，改之前核对过全部 Workday 岗位的链接前缀都与当前站点一致）；移出注册表的来源，每个实例启动后清一次。Meijer 因此删掉 2729 条门店小时工岗位，Hearst 删掉 37 条测试岗位。upsert 顺带更新公司名，改过名的来源（Bloomberg Industry Group）已下架的旧岗位也跟着改。
+
+**robots.txt 与抓取间隔**：新来源注册前用 `scripts/robots.mjs` 核对连接器实际要请求的接口路径（RFC 9309：只看 `User-agent: *` 组，最长匹配，同长时 Allow 优先）。Eightfold 的 robots.txt 先 `Disallow: /` 再 `Allow: /api/pcsx`，只看 Disallow 会误判。Zoom、Palo Alto Networks、Chewy、Snyk、Home Depot 禁止的是招聘板网页路径（`/Zoom/` 等），没有限制 `/wday/cxs/` 数据接口，按规则允许；Intuit、Synopsys、Schwab 的列表接口在被禁止的 `/search-jobs/` 下，Seagate 的在 `/services/` 下，Walmart 禁止 `/api`，这几家不接。`Crawl-delay` 记到来源的 `delay` 上（AMD、Rivian、DocuSign、PepsiCo 都是 5 秒），每次请求前都先等够，描述补拉也改为逐条发。
+
+**限流实测**：Lockheed Martin、Boston Scientific 的 Eightfold 站点在列表翻页加 4 路并发补详情时，四十多秒就把本机 IP 整站封成 403（连不带任何特殊头的 Node 请求也 403），过一阵自动解除；Qualcomm 返回 429，1.5 秒间隔仍会触发；Microsoft 此前就时常 429，1 秒间隔也会触发。现在这几家都按间隔串行请求（Lockheed、Boston Scientific 1 秒，Microsoft 2 秒，Qualcomm 3 秒），描述补拉同样逐条按间隔发、每页只补几条。代价是首次收录慢：Lockheed 近 2900 个岗位要翻 289 页，首轮连同补描述要四五十分钟，之后的更新只补新岗位的描述。
+
+**Apple 与 Atlassian**：Apple 的 403 不是 TLS 指纹——用 Node 复现，带上 workerd 给每个出站请求附加的 `CF-Worker: career-radar.example.com` 头就 403，去掉就 200（`cf-worker: localhost` 这种不像域名的值也能过）。本地开发时这两个来源改由 Vite 开发服务器上的 Node 中转发出（`lib/node-relay.ts`、`vite.config.ts`）：转发时去掉 `cf-*` 头，状态码与响应头（含 Apple 的 CSRF 令牌与 `Set-Cookie`）原样带回；只放行白名单域名，校验每次启动随机生成、经 Worker 环境变量下发的令牌；中转自己拒绝时用 421 并在响应头里注明原因，不和目标站点的 403 混在一起。Atlassian 带不带 `CF-Worker` 头用 curl 都是 200，但从 workerd 发出一律 403，具体按什么识别没有查清，经中转后正常。Apple 改用前端同款 JSON 接口（先取 CSRF 令牌与会话 cookie），每页约 37KB，原来的服务端渲染页要 330KB；请求体缺了 `format` 字段时它不报错而是返回 0 条，已改为 0 条即报错。另外，`vite.config.ts` 起初经 `node-relay.ts` 间接引用了注册表，而 Vite 会把配置文件的依赖都纳入监听，每改一次注册表就重启整个开发服务器，连续几次后 Cloudflare 插件内部的 runner 绑定丢失、所有请求 500，只能整个进程重启；现在 `node-relay.ts` 不引用任何应用代码，白名单与注册表的一致性由单测检查。
+
+**Workday 游标越界**：Cisco、Wells Fargo 从 9 月 24 日起一直报错，原因是续跑期间岗位总数变少（1323 → 1279、1436 → 1341），游标越过了当前总数：Workday 这时要么返回空页，要么带着真实总数把第一页再给一遍，被判成「分页提前结束 / 重复返回同一页」，一直卡到续跑窗口过期。现在按不完整收尾、下一轮从头来。注意很多租户（Wells Fargo、NVIDIA、Zoom）只在第一页返回总数、后面每页都是 0，判断时只能用大于 0 的总数——第一版漏了这一条，Wells Fargo 从头跑时第二页就收了尾（标为不完整、没有下架任何岗位），已修正并补了单测。
 
 ## 地区筛选
 
@@ -77,8 +108,8 @@
 - 美国范围根据招聘地点与国家字段识别；仅写 Remote、Americas 或 North America 且没有明确美国信息的记录不收录，可能漏掉模糊地点职位。职业分类依据英文标题，提供关键词检索补充。
 - 来源抓取失败保留已有记录，并单独显示失败。成功更新时已从来源消失的记录标为“来源已移除”，保留标记。
 - 几百个来源一起更新时官方接口会短暂限流。遇到 403/429/502/503/504 会按 `Retry-After` 或退避重试 3 次，不把整个来源直接判为失败；一轮全量后出现的 53 个失败来源，重跑后恢复 52 个。
-- **Apple 目前无法收录**：`jobs.apple.com` 按 TLS 指纹拦截非浏览器客户端，同一台机器用 Node 请求返回 200，从 Workers 运行时发出的请求一律 403。来源目录里会直接说明原因，可点进去用浏览器查看。未采用伪造指纹等绕过手段。
-- 不是全网覆盖。公司名与招聘板编号不一致时探测会漏掉该公司；iCIMS、Oracle、SuccessFactors、Eightfold 等系统没有稳定的公开接口，尚未接入。不保证所有岗位零遗漏。签证标签只是按描述原文做的规则识别，不代表公司的实际政策，也不判断个人申请资格。
+- **Apple、Atlassian 只在本地开发时收录**：这两家拒绝 Workers 运行时发出的请求（Apple 认的是 `CF-Worker` 请求头），本地开发时经 Vite 开发服务器上的 Node 中转（见「注册表修正与新平台」）。部署到 Workers 上没有中转，来源目录会直接说明原因。不伪装浏览器，不绕过人机验证。
+- 不是全网覆盖。有意不接入的大厂：Meta（robots.txt 声明自动收集需书面许可）、Tesla（Akamai）、Uber 与 Citadel（Cloudflare 人机验证）、Walmart（robots.txt 禁止 `/api`，只剩逐页抓 1.6 万个岗位页一条路）、Intuit、Synopsys、Charles Schwab、Seagate（列表接口被 robots.txt 禁止）、LinkedIn（岗位只在 linkedin.com，服务条款禁止）、Costco（官网几乎全是门店岗位）、Best Buy（要模拟浏览器会话）、Postman（Greenhouse 板已下线，没找到新的）。General Dynamics 的 Mission Systems、Electric Boat 等业务单元在老式 iCIMS 门户上，还没写连接器。公司名与招聘板编号不一致、又不在修正表里的公司仍会漏掉。不保证所有岗位零遗漏。签证标签只是按描述原文做的规则识别，不代表公司的实际政策，也不判断个人申请资格。
 - 网页展示岗位摘要，完整要求与岗位开放状态以官网为准。不自动提交简历，也不自动将打开链接视为完成投递。
 - 部署默认仅本人访问；数据库是个人工作台的共享存储，不可直接改为公共多人使用，除非另行增加逐用户数据隔离。
 
@@ -100,9 +131,10 @@
 ## 验证
 
 - `npx tsc --noEmit`
-- `npm test`（岗位来源、简历、级别与签证模块共 34 项单元测试）
+- `npm test`（岗位来源、连接器、简历、级别与签证模块共 50 项单元测试；连接器测试按真实响应结构构造夹具、替换 `fetch`，不联网）
 - `node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/eval-signals.mjs <D1 sqlite 副本>`：用整库真实岗位检验级别与签证规则（见「级别与签证筛选」）。
-- `node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/collect-live.mjs`：对注册表里每个来源做一次真实抓取，报告失败来源与地区识别率。注意它跑在 Node 里，与 Workers 运行时不完全等价（Apple 即为一例），来源可用性以应用内状态为准。
+- `node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/collect-live.mjs`：对注册表里每个来源做一次真实抓取，报告失败来源与地区识别率。注意它跑在 Node 里，与 Workers 运行时不完全等价（Apple、Atlassian 即为例子），来源可用性以应用内状态为准。
+- `node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/registry-fixes.mjs`：联网核实人工修正（探测 Workday 筛选项与 Oracle 美国地点编号、核对 robots.txt）并写回注册表，探测失败的来源会列出来。
 - 启动本地服务后运行 `powershell -File tests/integration.ps1`：真实岗位重复抓取、稳定计数、地区与分类筛选、首次发现时间和两类标记持久化，以及同步后级别与签证字段齐全、签证各类别恰好划分全集、「排除」类筛选不会扩大结果；验证后恢复测试岗位原标记。
 - `npm run build`
 

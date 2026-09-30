@@ -10,13 +10,13 @@
 
 ## 项目动机
 
-聚合类招聘网站转载滞后、跨站重复，决定一份申请值不值得投的关键信息也常常埋在正文里。Career Radar 改为直接对接数据源：轮询 603 家雇主自己的招聘系统，按官方岗位编号去重，并把两个问题变成一次筛选就能回答：**这个岗位的级别适合我吗？**（级别）以及**岗位描述里是否排除了签证担保？**（签证）
+聚合类招聘网站转载滞后、跨站重复，决定一份申请值不值得投的关键信息也常常埋在正文里。Career Radar 改为直接对接数据源：轮询 672 家雇主自己的招聘系统，按官方岗位编号去重，并把两个问题变成一次筛选就能回答：**这个岗位的级别适合我吗？**（级别）以及**岗位描述里是否排除了签证担保？**（签证）
 
 ## 核心特性
 
 | | |
 |---|---|
-| **603 个官方数据源** | 287 个 Workday 租户；Amazon、Microsoft、Google、Apple 的自建招聘站；以及托管在 Greenhouse、Ashby、Lever、SmartRecruiters 上的 312 个招聘板。全量更新后约 14.5 万个在招美国岗位。 |
+| **672 个官方数据源** | 307 个 Workday 租户；企业级招聘系统上的 30 家（Oracle 招聘云上的 JPMorgan Chase、Goldman Sachs、American Express、Oracle、Dell 等 11 家，Eightfold 上的 Lockheed Martin、Qualcomm 等 6 家，以及 iCIMS Jibe、SAP SuccessFactors、Avature）；Amazon、Microsoft、Google、Apple、IBM、Atlassian、McKinsey 的自建招聘站；以及托管在 Greenhouse、Ashby、Lever、SmartRecruiters、Rippling 上的 328 个招聘板。其中 205 家标为精选大厂，可单独筛选。 |
 | **可续传的增量同步** | 分页连接器配合租约锁、持久化游标和重复页指纹检测。一轮全量更新约 5,600 次上游请求，并发 8 时约 12 分钟完成。 |
 | **带证据的信号提取** | 规则分类器从标题判断级别、从岗位描述判断签证限制，并保存每个判断所依据的原句，方便一眼核对。 |
 | **基于 D1 的分面检索** | 地点归一化为州、40 个都会区和 294 个城市。约 13.7 万条数据下，列表查询耗时 18–30 ms。 |
@@ -28,8 +28,9 @@
 浏览器（React 客户端）
   │  刷新循环：8 个来源并发，可续传中断的更新
   ▼
-/api/sync ──► 连接器 ──► Workday · Greenhouse · Ashby · Lever · SmartRecruiters
-  │                      Amazon · Microsoft · Google
+/api/sync ──► 连接器 ──► Workday · Oracle 招聘云 · Eightfold · iCIMS Jibe · SuccessFactors · Avature
+  │                      Greenhouse · Ashby · Lever · SmartRecruiters · Rippling
+  │                      Amazon · Microsoft · Google · IBM · McKinsey · Apple / Atlassian（经本机 Node 中转）
   │   ├─ 归一化 → 职业与级别分类 → 地点解析 → 签证信号提取
   │   ├─ 列表不含描述时，按需调用详情接口补拉
   │   └─ 以（来源, 官方岗位编号）为键的幂等写入
@@ -41,9 +42,10 @@ Cloudflare D1（SQLite） ◄── /api/jobs      每次请求两条查询：�
 ### 数据采集管线
 
 - **来源注册表。** Workday 租户通过各租户的 `robots.txt` 发现，再用其 CXS 接口验证；托管招聘板按公司名逐一对照各平台公开 API 核实（`scripts/make-registry.mjs`）。每家公司只保留一个来源，自建系统优先于托管招聘板，避免同一岗位重复收录。
-- **连接器。** 每个平台一个适配器（`lib/connectors.ts`），把岗位映射成统一结构。Greenhouse 首次收录之后改用轻量列表（743 KB，带正文时为 9.4 MB），描述再按需补拉。
-- **运行控制。** 每次 `/api/sync` 调用对所属来源持有 120 秒租约，在 20 秒预算内最多抓取 6 页，并保存游标。关闭页面或超时后，下次从中断处继续。如果来源重复返回同一页，本次运行会中止，而不是静默截断。
-- **岗位生命周期。** 在一次**完整**运行中消失的岗位会被软删除（标记为"来源已移除"），用户的标记保留。触及上游条数上限的运行（Workday 2,000 条、Amazon 10,000 条）会标记为不完整，不做任何下架判定。
+- **注册表修正。** 按公司名猜招聘板地址，会漏掉 slug 与公司名对不上的雇主（DoorDash 是 `doordashusa`，Anduril 是 `andurilindustries`），有时还会连错：连到招聘系统的测试账号（Uber、LinkedIn）、子公司（连成了 Bloomberg Industry Group 而不是 Bloomberg L.P.），或者窄口径子站点（Meijer 的门店小时工站）。这些修正，以及自动发现覆盖不到的招聘系统上的雇主，都登记在 `scripts/registry-fixes.mjs`，`make-registry.mjs` 每次重新生成都会套用。接入新来源前，会用它的 `robots.txt` 核对连接器实际要请求的接口路径，并把 `Crawl-delay` 记到来源上。
+- **连接器。** 每个平台一个适配器（`lib/connectors.ts`），把岗位映射成统一结构。Greenhouse 首次收录之后改用轻量列表（743 KB，带正文时为 9.4 MB），描述再按需补拉。Greenhouse 岗位的地点只写了办公形式（"Hybrid"、"Distributed"）时，改用所属办公室的地址，Cloudflare 因此从只认出 1 个美国岗位变成 215 个。招聘系统测试账号里的占位岗位（"Corporate UAT TEST JOB" 之类）在入库前过滤掉。
+- **运行控制。** 每次 `/api/sync` 调用对所属来源持有 120 秒租约，在 20 秒预算内最多抓取 6 页，并保存游标。关闭页面或超时后，下次从中断处继续。如果来源重复返回同一页，本次运行会中止，而不是静默截断。要求了抓取间隔的来源（AMD、Rivian、DocuSign、PepsiCo 都是 5 秒）每次请求前都先等够，描述补拉也改为逐条发送。
+- **岗位生命周期。** 在一次**完整**运行中消失的岗位会被软删除（标记为"来源已移除"），用户的标记保留。触及上游条数上限的运行（Workday 2,000 条、Amazon 10,000 条）会标记为不完整，不做任何下架判定。测试岗位、来源改连新站点后旧站点留下的岗位、以及已移出注册表的来源的岗位，只要没被标记过就直接删除。网页类连接器遇到解析不了的页面会报错、不结束本轮，页面改版或维护页不会让整家公司的岗位被标成下架。
 - **限流策略。** 上游返回 403、429、5xx 时，按 `Retry-After` 或指数退避重试。描述补拉始终让位于列表分页：
   - 补拉请求遇到 429 不重试，并发也低于列表；
   - 任何请求（列表或详情）遇到 429，都会让所在站点群进入一分钟冷却，期间所有来源暂停补拉。
@@ -101,7 +103,7 @@ npm run dev
 
 | 命令 | 覆盖范围 |
 |---|---|
-| `npm test` | 34 项单元测试：连接器与归一化、地点解析、更新范围、简历渲染 / DOCX / ZIP，以及用真实岗位原文做用例的级别与签证规则 |
+| `npm test` | 50 项单元测试：每类连接器的解析（夹具按真实响应的结构构造，替换 `fetch` 离线运行）、`robots.txt` 规则、Apple 中转与 CSRF 会话、注册表约束与修正、地点解析、更新范围、简历渲染 / DOCX / ZIP，以及用真实岗位原文做用例的级别与签证规则 |
 | `npx tsc --noEmit` | 类型检查 |
 | `powershell -File tests/integration.ps1` | 针对运行中的开发服务：重复同步的幂等性、描述不被覆盖、标记持久化、地区与分类筛选、信号字段完整性，以及签证各类别恰好划分全集 |
 | `node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/collect-live.mjs` | 对每个已注册来源做一次真实抓取 |
@@ -117,20 +119,23 @@ app/
 lib/
   connectors.ts           平台适配器、重试与冷却、详情补拉
   sources.ts              来源注册表、职业分类、归一化
+  node-relay.ts           本机 Node 中转（给拒绝 Workers 运行时的站点用）
+  prune.ts                注册表修正后的数据整理
   job-signals.ts          级别与签证规则
   job-query.ts            筛选条件 → SQL
   us-locations.ts         州 / 都会区 / 城市解析
   resume-*.ts, zip.ts     简历模型、渲染、导入、DOCX 与 ZIP 生成
 db/schema.ts, drizzle/    数据库结构与迁移
-scripts/                  来源发现、在线检查、规则评估
+scripts/                  来源发现与修正、robots.txt 检查、在线检查、规则评估
 tests/                    单元测试与集成测试
 docs/                     工程笔记
 ```
 
 ## 适用范围与已知限制
 
-- **覆盖范围。** 来源并非全网覆盖。iCIMS、Oracle、SuccessFactors、Eightfold 没有稳定的公开接口，尚未接入；招聘板编号与公司名不一致的公司，在发现阶段可能被遗漏。
-- **Apple。** `jobs.apple.com` 会拒绝来自 Workers 运行时的非浏览器 TLS 指纹，该来源显示为不可用。项目不伪造指纹。
+- **覆盖范围。** 来源并非全网覆盖。以下大厂是有意不接入的：Meta（`robots.txt` 声明自动收集需要书面许可）、Tesla（Akamai 拦截所有非浏览器客户端）、Uber 与 Citadel（Cloudflare 人机验证）、Walmart（`robots.txt` 禁止它的岗位接口，允许的办法只有逐页抓取 1.6 万个岗位页面）、Intuit、Synopsys、Charles Schwab、Seagate（列表接口被 `robots.txt` 禁止）、LinkedIn（岗位只在 linkedin.com 上，服务条款禁止抓取）、Costco（官网岗位几乎都是门店岗位）、Best Buy（需要模拟浏览器会话）。General Dynamics 的几个业务单元用的是老式 iCIMS 门户，还没有连接器。招聘板编号与公司名不一致、又不在修正表里的公司，仍可能被遗漏。
+- **Apple 与 Atlassian。** 这两家都拒绝 Workers 运行时发出的请求，同一台机器用 Node 发同样的请求却正常返回。Apple 的触发条件是运行时给每个出站请求附加的 `CF-Worker` 请求头（之前误以为是 TLS 指纹）。本地开发时，这两个来源经 Vite 开发服务器上的中转发出：请求由这台电脑上的 Node 发出，不带运行时附加的 `cf-*` 头，也不伪装浏览器。中转只放行白名单里的域名，并校验每次启动时随机生成的令牌。部署到 Workers 上时没有这个中转，这两个来源会显示为不可用。
+- **限流。** 部分 Eightfold 租户（Lockheed Martin、Boston Scientific）在请求过快时会临时封禁客户端 IP，Qualcomm 和 Microsoft 会返回 429。这些来源都设了逐个来源的请求间隔（1–3 秒，描述补拉也算在内），首次收录因此较慢：Lockheed 的 289 页要跑将近一个小时。万一仍被封，之后的更新会从游标处接着跑，期间保留已有岗位。
 - **信号属于启发式判断。** 签证标签只反映岗位描述的措辞，不代表雇主的实际政策，也不代表任何申请人的资格。工作年限要求暂未解析。
 - **描述补拉覆盖率。** 在列表不含描述的平台上，只为已归类职业的非资深岗位补拉描述。一轮全量更新后，这部分 Workday 岗位的覆盖率为 50%，之后每轮更新都会继续提高。
 - **单用户。** 数据库是个人工作区，没有按用户隔离数据。
@@ -138,7 +143,7 @@ docs/                     工程笔记
 
 ## 数据使用原则
 
-所有数据都来自雇主公开的招聘接口，也就是其招聘页面自身加载的同一份 JSON。项目不访问需要登录、付费或身份验证的内容；请求遵循 `Retry-After`，出错时退避，上游开始限流时主动降低补拉频率。
+所有数据都来自雇主公开的招聘接口，也就是其招聘页面自身加载的同一份 JSON（SuccessFactors 与 Avature 则是同一份服务端渲染的列表页）。项目不访问需要登录、付费或身份验证的内容。接入来源前会用 `robots.txt` 核对连接器实际请求的路径，并遵守 `Crawl-delay`；请求遵循 `Retry-After`，出错时退避，上游开始限流时主动降低补拉频率。任何人机验证（Cloudflare、Akamai、Azure WAF）都不绕过，挂着这类验证的站点不接入。
 
 ## 后续规划
 

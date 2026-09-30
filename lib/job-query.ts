@@ -1,9 +1,10 @@
 import { SOURCES } from './sources';
 import { METROS } from './us-locations';
 import { LEVELS,VISAS,VISA_BLOCKED } from './job-signals';
+import { inGroup } from './update-scope';
 const METRO_IDS=new Set(METROS.map(m=>m.id));
 // 来源已有数百个，按分类筛选时不能用绑定参数（D1 限制变量数量）；来源编号是注册表里的固定短横线小写标识，这里再校验一次后内联。
-export const GROUP_IN:Record<string,string>=Object.fromEntries(['company','platform'].map(g=>[g,SOURCES.filter(s=>s.group===g).map(s=>{if(!/^[a-z0-9-]+$/.test(s.id))throw Error('来源编号含非法字符：'+s.id);return `'${s.id}'`}).join(',')]));
+export const GROUP_IN:Record<string,string>=Object.fromEntries(['company','platform','major'].map(g=>[g,SOURCES.filter(s=>inGroup(s,g)).map(s=>{if(!/^[a-z0-9-]+$/.test(s.id))throw Error('来源编号含非法字符：'+s.id);return `'${s.id}'`}).join(',')]));
 export const escapeLike=(v:string)=>v.replace(/[\\%_]/g,'\\$&');
 export type Filters={q:string;role:string;kind:string;level:string;visa:string;view:string;group:string;company:string;metro:string;city:string;page:number};
 export function readFilters(p:URLSearchParams):Filters{
