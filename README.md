@@ -89,7 +89,11 @@ Filter funnel after a full refresh on 2026-09-23:
 
 ## Getting started
 
-Requires Node.js 22.13 or later.
+Requires Node.js 22.13 or later, on Windows, macOS (Apple silicon or Intel) or Linux.
+
+**One double-click:** `Start-Radar.bat` on Windows, `Start-Radar.command` on macOS. The launcher installs dependencies on the first run, applies any pending database migrations, starts the dev server and (on macOS) opens it in the browser. Closing the terminal window stops the server. If macOS refuses to open the downloaded `.command` file, run it from Terminal instead: type `bash `, drag the file into the window, press Return.
+
+Or step by step:
 
 ```bash
 npm ci

@@ -89,7 +89,11 @@ D1 会把同一请求内的语句串行执行，所以列表接口只发两条�
 
 ## 快速开始
 
-需要 Node.js 22.13 或更高版本。
+需要 Node.js 22.13 或更高版本，Windows、macOS（Apple 芯片或 Intel）、Linux 都能运行。
+
+**双击启动：** Windows 双击 `Start-Radar.bat`，macOS 双击 `Start-Radar.command`。启动脚本第一次运行时会安装依赖，每次启动都会补上尚未执行的数据库迁移，然后启动开发服务（macOS 上会自动用浏览器打开）。关掉终端窗口就停止服务。如果 macOS 不让打开下载来的 `.command` 文件，可以在「终端」里输入 `bash `（末尾有空格），把这个文件拖进窗口，按回车。
+
+也可以逐步执行：
 
 ```bash
 npm ci
