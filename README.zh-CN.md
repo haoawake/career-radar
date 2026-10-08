@@ -87,6 +87,15 @@ D1 会把同一请求内的语句串行执行，所以列表接口只发两条�
 | + 排除签证受限 | 16,588 |
 | + 仅正式岗位 | 15,287 |
 
+## Windows / macOS 下载包
+
+GitHub Release 提供两个启动包：
+
+- `CareerRadar-win-x64.zip` — Windows 10/11（64 位）；解压到固定文件夹，双击 `Start-Career-Radar.cmd`。
+- `CareerRadar-mac-universal.zip` — macOS Intel / Apple 芯片；解压到固定文件夹，双击 `Start-Career-Radar.command`。首次可能需要 Control+单击打开，或在终端执行 `zsh Start-Career-Radar.command`。
+
+**注意：这是本地 Web 应用启动包，不是原生 EXE / DMG 应用。** 两个平台都需要预先安装 Node.js 22.13+。首次启动会安装依赖、初始化本地 D1 数据库，然后在终端显示访问地址；浏览器打开该地址使用。终端须保持运行。本地数据保存在解压目录的 `.wrangler/state`，请不要直接从临时下载目录运行，也不要在更新时删除旧目录里的该数据文件夹。
+
 ## 快速开始
 
 需要 Node.js 22.13 或更高版本。
